@@ -7,7 +7,7 @@ function addMore() {
   } else {
     var box = document.getElementById("box");
     let li = document.createElement("li");
-    //li.textContent = name;
+
     // content.id = "data";
     box.appendChild(li);
     document.getElementById("name").value = "";
@@ -23,14 +23,14 @@ function addMore() {
     delButton.addEventListener("click", deleting);
 
     //for editing
-    // var edit = document.createElement("button");
-    // edit.textContent = "Edit";
-    // edit.className = "edit";
-    // li.appendChild(edit);
-
-    // edit.addEventListener("click", (e) => {
-    //   editTask(e.target.parentElement);
-    // });
+    let edit = document.createElement("button");
+    edit.textContent = "Edit";
+    edit.type = "button";
+    edit.className = "edit";
+    li.appendChild(edit);
+    edit.addEventListener("click", (e) => {
+      editing(e.target.parentElement);
+    });
   }
 }
 let delbtn = document.querySelector("ul");
@@ -39,10 +39,15 @@ function deleting() {
   delbtn.removeChild(forDelete);
 }
 
-//working on it
-// var editItem = null;
-// var button = document.getElementById("data");
-// button.addEventListener("click", function (evt) {
-//   evt.target.parentNode.childNodes[0].data;
-//   editItem = evt;
-// });
+function editing(a) {
+  var update = a.querySelector("span");
+  let input = document.createElement("input");
+  input.type = "text";
+  input.value = update.textContent;
+  a.append(input);
+  input.focus();
+  input.addEventListener("blur", () => {
+    update.innerHTML = input.value;
+    input.remove();
+  });
+}

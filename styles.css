@@ -38,13 +38,21 @@
 
 .remove {
   float: right;
+  /* background-color: #eab64fda; */
 }
 .edit {
   float: right;
-  padding-right: 5px;
-  /* ul li.editMode input[type=text]  */
+  margin-right: 5px;
   display: block;
+  text-decoration: none;
+  /* background-color: #eab64fda; */
 }
 .container #error {
   color: #ff0000;
+}
+button {
+  color: #663504;
+  border-color: transparent;
+  min-height: 22px;
+  width: 40px;
 }
