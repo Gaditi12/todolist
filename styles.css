@@ -1,0 +1,50 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  padding: 10px;
+  border: 1px solid #bcb8b9;
+  width: 40%;
+  margin: auto;
+  font-size: 20px;
+}
+
+.container .input {
+  width: 80%;
+  height: 30px;
+}
+
+.container .btn {
+  width: 50px;
+  height: 30px;
+}
+
+.container ul {
+  list-style: none;
+  padding: 0px;
+}
+.container li {
+  border: 1px solid #f3e5c9;
+  border-radius: 5px;
+  background-color: #f3e5c9;
+  color: #000000;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 89%;
+}
+
+.remove {
+  float: right;
+}
+.edit {
+  float: right;
+  padding-right: 5px;
+  /* ul li.editMode input[type=text]  */
+  display: block;
+}
+.container #error {
+  color: #ff0000;
+}
