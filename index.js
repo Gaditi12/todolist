@@ -7,8 +7,14 @@ function addMore() {
   } else {
     var box = document.getElementById("box");
     let li = document.createElement("li");
-
+    li.className = "editMode";
     box.appendChild(li);
+
+    var checkbox = document.createElement("input");
+    checkbox.type = "checkbox";
+    checkbox.className = "check-box";
+    li.appendChild(checkbox);
+
     document.getElementById("name").value = "";
     var content = document.createElement("span");
     content.innerText = name;
@@ -30,13 +36,25 @@ function addMore() {
     edit.type = "button";
     edit.id = "update";
     edit.className = "edit";
+    edit.disabled = false;
     li.appendChild(edit);
 
     edit.addEventListener("click", () => {
       let name = document.querySelector("#name");
+      //let btn = document.querySelector("#button");
       name.value = content.innerText;
-      const parent = edit.parentElement;
-      parent.parentElement.removeChild(parent);
+
+      //btn.value = "Save";
+
+      // const parent = edit.parentElement;
+      // parent.parentElement.removeChild(parent);
+    });
+    checkbox.addEventListener("click", () => {
+      if (checkbox.checked == true) {
+        edit.disabled = true;
+      } else {
+        edit.disabled = false;
+      }
     });
   }
 }

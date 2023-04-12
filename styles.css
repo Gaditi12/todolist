@@ -3,15 +3,24 @@
   margin: 0;
   padding: 0;
 }
-
-.container {
-  padding: 10px;
-  border: 1px solid #bcb8b9;
-  width: 40%;
-  margin: auto;
-  font-size: 20px;
+body {
+  background-image: linear-gradient(to bottom right, #2389ef, #b866ca);
 }
-
+.container {
+  background-color: #fff;
+  padding: 10px;
+  border: 2px solid #2d292a;
+  width: 40%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  font-size: 20px;
+  position: relative;
+  box-shadow: 5px 5px 10px#000000;
+}
+h2 {
+  text-align: center;
+}
 .container .input {
   width: 80%;
   height: 30px;
@@ -55,4 +64,11 @@ button {
   background-color: #5cf1f9;
   min-height: 22px;
   width: 40px;
+}
+.check-box {
+  margin-right: 2px;
+}
+input:checked + span {
+  text-decoration: line-through;
+  text-decoration-color: #7b5018;
 }
