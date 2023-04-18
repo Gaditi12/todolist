@@ -37,9 +37,9 @@ h2 {
   padding: 0px;
 }
 .container li {
-  border: 1px solid #f3e5c9;
+  border: 1px solid #f7f6ce;
   border-radius: 5px;
-  background-color: #e1a3eee5;
+  background-color: #ecd1f1e5;
   color: #000000;
   margin-top: 10px;
   margin-bottom: 10px;
@@ -72,4 +72,24 @@ button {
 input:checked + span {
   text-decoration: line-through;
   text-decoration-color: #7b5018;
+}
+
+@media screen and (min-width: 480px) and (max-width: 768px) {
+  body {
+    background-image: linear-gradient(to bottom right, #f3c4c4, #e74141);
+  }
+
+  .container .input {
+    width: 70%;
+  }
+
+  .container li {
+    border: 1px solid #f7f6ce;
+    border-radius: 5px;
+    background-color: #eb9292c1;
+    color: #000000;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 89%;
+  }
 }

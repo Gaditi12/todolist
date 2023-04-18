@@ -8,8 +8,8 @@ function addMore() {
     error.innerHTML = "Please add task";
   } else {
     if (isEdit == 1) {
-      let num = document.querySelector("#" + editID);
-      num.innerText = name;
+      let update = document.querySelector("#" + editID);
+      update.innerText = name;
       //var contentValue = document.getElementById("data_" + uniqueID);
       //contentValue.innerText = name.value;
       isEdit = 0;
@@ -35,7 +35,7 @@ function addMore() {
       var content = document.createElement("span");
       content.innerText = name;
       content.className = "getData";
-      content.id = "data" + "_" + uniqueID;
+      content.id = "data_" + uniqueID;
 
       li.appendChild(content);
       //creating a delete button
